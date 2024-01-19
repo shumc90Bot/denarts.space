@@ -1,0 +1,71 @@
+/*
+Theme Name: Kalium - Freelancer Theme
+Theme URI: https://laborator.co/themes/kalium/
+Author: Laborator
+Author URI: https://laborator.co/
+Description: Start creating that amazing website that you have always wanted, only with Kalium — Connect with Laborator on: <a href="https://themeforest.net/user/laborator">Envato</a> &bull; <a href="https://twitter.com/thelaborator">Twitter</a> &bull; <a href="https://www.facebook.com/laboratorcreative">Facebook</a> &bull; <a href="https://www.instagram.com/laboratorcreative/">Instagram</a>
+Version: 1.0
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: kalium
+Text Domain: kalium
+*/
+/* ===========================================================
+Custom modification only for FREELANCER Demo - START
+=========================================================== */
+
+/* Center Titles */
+.wpb_wrapper .section-title {
+    text-align: center;
+}
+
+/* Titles: Top Margin */
+body.page .section-title h1, body.page .section-title h2, body.page .section-title h3 {
+    margin-top: 60px !important;
+}
+
+/* Top Menu: Bottom padding for contact form labels  */
+.top-menu--widgets .widgettitle {
+    color: #FFF;
+}
+
+/* Top Menu: Remove underline from titles on mouseover */
+.top-menu-container .top-menu ul li a:after {
+    background-color: transparent;
+}
+
+/* Blog: Remove underline from titles on mouseover */
+.blog-posts .post-item .post-details .post-title a:after {
+    display: none;
+}
+
+/* Background Image */
+.wrapper {
+/* background:url(https://demo.kaliumtheme.com/freelancer/wp-content/uploads/2015/04/pattern-29.jpg); */
+}
+
+/* Contact: Input Form Border Color */
+.labeled-input-row input {
+    border-bottom-color: #ededed;
+}
+
+/* Contact: Input Form Border Color */
+.labeled-textarea-row textarea {
+    background-image: linear-gradient(#ededed 1px, transparent 1px);
+}
+
+/* Top Menu: Text Colors */
+.top-menu-container.menu-skin-dark .widget, .top-menu-container.menu-skin-dark .widget a, .top-menu-container.menu-skin-dark .widget p {
+    color: #c1c1c1 !important;
+}
+
+/* ===========================================================
+Custom modification only for FREELANCER Demo - END
+=========================================================== */
+
+/* ===========================================================
+User CSS modifications
+=========================================================== */
+.example {
+    color: red !important;
+}

@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'KaliumAdminIcons';
+  src:
+    url('fonts/KaliumAdminIcons.ttf?dzotdw') format('truetype'),
+    url('fonts/KaliumAdminIcons.woff?dzotdw') format('woff'),
+    url('fonts/KaliumAdminIcons.svg?dzotdw#KaliumAdminIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class*="kalium-admin-icon"] {
+    display: inline-block;
+    font-family: 'KaliumAdminIcons';
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.kalium-admin-icon-post-settings:before {
+  content: "\e907";
+}
+.kalium-admin-icon-audio-settings:before {
+  content: "\e91c";
+}
+.kalium-admin-icon-page-options:before {
+  content: "\e923";
+}
+.kalium-admin-icon-custom-css:before {
+  content: "\e928";
+}
+.kalium-admin-icon-project-gallery:before {
+  content: "\e929";
+}
+.kalium-admin-icon-featured-video:before {
+  content: "\e92a";
+}
+.kalium-admin-icon-checklist:before {
+  content: "\e92b";
+}
+.kalium-admin-icon-project-link:before {
+  content: "\e92c";
+}
+.kalium-admin-icon-performance:before {
+  content: "\e92d";
+}
+.kalium-admin-icon-christmas-tree:before {
+  content: "\e92e";
+}
+.kalium-admin-icon-align-right:before {
+  content: "\e92f";
+}
+.kalium-admin-icon-align-center:before {
+  content: "\e930";
+}
+.kalium-admin-icon-align-left:before {
+  content: "\e931";
+}
+.kalium-admin-icon-laborator:before {
+  content: "\e900";
+}
+.kalium-admin-icon-kalium:before {
+  content: "\e901";
+}
+.kalium-admin-icon-changelog:before {
+  content: "\e902";
+}
+.kalium-admin-icon-backup:before {
+  content: "\e903";
+}
+.kalium-admin-icon-maintenance:before {
+  content: "\e904";
+}
+.kalium-admin-icon-coming-soon:before {
+  content: "\e905";
+}
+.kalium-admin-icon-social-networks:before {
+  content: "\e906";
+}
+.kalium-admin-icon-theme-styling:before {
+  content: "\e908";
+}
+.kalium-admin-icon-branding:before {
+  content: "\e927";
+}
+.kalium-admin-icon-settings:before {
+  content: "\e909";
+}
+.kalium-admin-icon-shop:before {
+  content: "\e90a";
+}
+.kalium-admin-icon-blog:before {
+  content: "\e90b";
+}
+.kalium-admin-icon-portfolio:before {
+  content: "\e90c";
+}
+.kalium-admin-icon-expand:before {
+  content: "\e90d";
+}
+.kalium-admin-icon-footer:before {
+  content: "\e90e";
+}
+.kalium-admin-icon-header:before {
+  content: "\e90f";
+}
+.kalium-admin-icon-save-changes:before {
+  content: "\e910";
+}
+.kalium-admin-icon-search:before {
+  content: "\e932";
+}
+.kalium-admin-icon-register:before {
+  content: "\e933";
+}
+.kalium-admin-icon-social-twitter:before {
+  content: "\e911";
+}
+.kalium-admin-icon-social-facebook:before {
+  content: "\e912";
+}
+.kalium-admin-icon-documentation:before {
+  content: "\e913";
+}
+.kalium-admin-icon-arrow-right:before {
+  content: "\e914";
+}
+.kalium-admin-icon-refresh:before {
+  content: "\e915";
+}
+.kalium-admin-icon-alert-info:before {
+  content: "\e916";
+}
+.kalium-admin-icon-caret:before {
+  content: "\e917";
+}
+.kalium-admin-icon-arrow-up:before {
+  content: "\e918";
+}
+.kalium-admin-icon-arrow-down:before {
+  content: "\e919";
+}
+.kalium-admin-icon-drag-alt:before {
+  content: "\e91a";
+}
+.kalium-admin-icon-drag:before {
+  content: "\e91b";
+}
+.kalium-admin-icon-check:before {
+  content: "\e939";
+}
+.kalium-admin-icon-check-alt:before {
+  content: "\e91d";
+}
+.kalium-admin-icon-remove:before {
+  content: "\e91e";
+}
+.kalium-admin-icon-remove-alt:before {
+  content: "\e91f";
+}
+.kalium-admin-icon-plus:before {
+  content: "\e920";
+}
+.kalium-admin-icon-plus-circle:before {
+  content: "\e935";
+}
+.kalium-admin-icon-export:before {
+  content: "\e921";
+}
+.kalium-admin-icon-import:before {
+  content: "\e922";
+}
+.kalium-admin-icon-device-desktop:before {
+  content: "\e924";
+}
+.kalium-admin-icon-device-tablet:before {
+  content: "\e925";
+}
+.kalium-admin-icon-device-phone:before {
+  content: "\e926";
+}

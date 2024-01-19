@@ -1,0 +1,115 @@
+/*
+Theme Name: Kalium - Agency Theme
+Theme URI: https://laborator.co/themes/kalium/
+Author: Laborator
+Author URI: https://laborator.co/
+Description: Start creating that amazing website that you have always wanted, only with Kalium — Connect with Laborator on: <a href="https://themeforest.net/user/laborator">Envato</a> &bull; <a href="https://twitter.com/thelaborator">Twitter</a> &bull; <a href="https://www.facebook.com/laboratorcreative">Facebook</a> &bull; <a href="https://www.instagram.com/laboratorcreative/">Instagram</a>
+Version: 1.0
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: kalium
+Text Domain: kalium
+*/
+/* ===========================================================
+Custom modification only for AGENCY Demo - START
+=========================================================== */
+
+/* Homepage: Auto Type Line Height */
+.wpb_wrapper .auto-type-element {
+    line-height: 90px;
+}
+
+/* Homepage: Auto Type Black Block */
+.wpb_wrapper .auto-type-element span.block {
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+/* Homepage: Auto Type changes for 768px and below screen sizes */
+@media screen and (max-width: 768px) {
+    /* Homepage: Auto Type Line Height */
+    .wpb_wrapper .auto-type-element {
+        line-height: normal;
+    }
+
+    /* Homepage: Auto Type Black Block */
+    .wpb_wrapper .auto-type-element span.block {
+        padding: 0px 8px;
+    }
+}
+
+/* Blog: Comments Leave a Reply Background */
+.post-comment-form {
+    background: #fff;
+}
+
+/* Blog: Comments Caret */
+.single-post .post-comments:before {
+    border-color: #f2f2f2 transparent transparent transparent;
+}
+
+/* Contact: Input Border Bottom Color */
+.contact-form input, .contact-form textarea {
+    border-bottom-color: #dadada;
+}
+
+/* Contact: Textarea Lines */
+.contact-form textarea {
+    background-image: linear-gradient(#dadada 1px, transparent 1px);
+}
+
+/* Portfolio: Thumbnail */
+.portfolio-holder .thumb {
+    position: initial;
+}
+
+/* Portfolio: Category Color on Hover */
+.portfolio-holder .thumb .hover-state .info p a:hover {
+    color: #222;
+}
+
+/* Portfolio: Likes Background */
+.single-portfolio-holder .social .likes {
+    background: #fff;
+}
+
+/* Blog: Search Background Color in Sidebar */
+.widget.widget_product_search .search-bar input[name="s"],
+.widget.widget_search .search-bar input[name="s"] {
+    background: #EEE;
+}
+
+/* Blog: Hide underline from titles */
+.blog-posts .post-item .post-details .post-title a:after {
+    display: none;
+}
+
+/* Custom CSS made by Laborator :END*/
+@media only screen and (max-width: 768px) {
+    .no-margin-desktop .vc_column-inner {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+/* Site line height */
+body, p {
+    line-height: 1.6;
+}
+
+/* Blog: Reply comments display  */
+.labeled-input-row {
+    flex-wrap: unset;
+}
+
+/* ===========================================================
+Custom modification only for AGENCY Demo - END
+=========================================================== */
+
+/* ===========================================================
+User CSS modifications
+=========================================================== */
+.example {
+    color: red !important;
+}

@@ -1,0 +1,76 @@
+/*
+Theme Name: Kalium - Shop Theme
+Theme URI: https://laborator.co/themes/kalium/
+Author: Laborator
+Author URI: https://laborator.co/
+Description: Start creating that amazing website that you have always wanted, only with Kalium — Connect with Laborator on: <a href="https://themeforest.net/user/laborator">Envato</a> &bull; <a href="https://twitter.com/thelaborator">Twitter</a> &bull; <a href="https://www.facebook.com/laboratorcreative">Facebook</a> &bull; <a href="https://www.instagram.com/laboratorcreative/">Instagram</a>
+Version: 1.0
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: kalium
+Text Domain: kalium
+*/
+/* ===========================================================
+Custom modification only for SHOP Demo - START
+=========================================================== */
+
+/* Homepage: Free Shipping Text Align */
+.free-shipping {
+    text-align: center;
+}
+
+/* Footer: Link Color */
+footer.main-footer a {
+    color: #bbb !important;
+}
+
+/* Footer Inverted: Background Color */
+footer.main-footer-inverted {
+    background-color: #333 !important;
+}
+
+/* Footer: Border Color */
+.main-footer.main-footer-inverted hr {
+    border-color: rgba(255,255,255,.1);
+}
+
+/* Footer: Removed Margin Bottom for Widgets */
+.footer-widgets .widget.widget_nav_menu {
+    margin-bottom: 0px;
+}
+
+/* Footer: Decreased Padding for Widgets */
+.footer-widgets .widget ul li {
+    padding: 2px 0px;
+}
+
+/* Separator Line */
+.vc_separator.vc_sep_color_grey .vc_sep_line {
+    border-color: #333;
+}
+
+/* Sidbar Right: Added an extra padding on the left */
+.blog-sidebar.shop-sidebar.shop-sidebar-right {
+    padding-left: 20px;
+}
+
+/* Blog: Textarea Lines */
+.comment-form textarea {
+    background-image: linear-gradient(#DDD 1px, transparent 1px);
+}
+
+/* Blog: Textarea Lines */
+.labeled-input-row input {
+    border-bottom-color: #DDD;
+}
+
+/* ===========================================================
+Custom modification only for SHOP Demo - END
+=========================================================== */
+
+/* ===========================================================
+User CSS modifications
+=========================================================== */
+.example {
+    color: red;
+}

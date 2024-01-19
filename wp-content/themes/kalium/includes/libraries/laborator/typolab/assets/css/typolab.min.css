@@ -1,0 +1,1338 @@
+@charset "UTF-8";
+@keyframes typolab-spin-animation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.typolab.wrap {
+  margin: 25px 40px 0 20px; }
+
+.typolab .button + .button {
+  margin-left: 10px; }
+
+.typolab .button.is-loading {
+  opacity: 0.8;
+  transition: opacity 300ms;
+  cursor: wait; }
+
+.typolab .button#fetch-font-variants.is-loading i {
+  animation-name: typolab-spin-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.typolab .typolab-button i {
+  margin-right: 5px;
+  font-size: 95%; }
+
+.typolab .button-group {
+  position: relative; }
+  .typolab .button-group .button {
+    line-height: 1; }
+    @media screen and (max-width: 782px) {
+      .typolab .button-group .button {
+        min-height: 30px; } }
+    .typolab .button-group .button:first-of-type {
+      border-radius: 3px 0 0 3px; }
+    .typolab .button-group .button.button-alt {
+      background-color: #fff;
+      border-color: #32373C;
+      color: #32373C; }
+    .typolab .button-group .button + .button {
+      margin-left: 0;
+      border-left-width: 1px !important; }
+
+.typolab .typolab-heading {
+  position: relative;
+  margin: 0; }
+  .typolab .typolab-heading .add-new-font {
+    position: relative;
+    top: -3px;
+    margin-left: 10px;
+    font-weight: 600;
+    vertical-align: middle; }
+    .typolab .typolab-heading .add-new-font:active {
+      border-color: #8c8f94; }
+  .typolab .typolab-heading .laborator-notice {
+    display: block !important;
+    margin-top: 15px; }
+    .typolab .typolab-heading .laborator-notice .button + .button {
+      margin-left: 0; }
+  .typolab .typolab-heading .notice p,
+  .typolab .typolab-heading .notice a {
+    font-size: 13px; }
+
+.typolab .typolab-tabs {
+  border-bottom: 1px solid #D0D0D0;
+  margin-bottom: 30px;
+  justify-content: flex-start; }
+  .typolab .typolab-tabs .nav-tab {
+    padding: 10px 2px;
+    margin-right: 30px;
+    font-size: 18px;
+    line-height: 1.33333333;
+    font-weight: 400; }
+    .typolab .typolab-tabs .nav-tab:focus {
+      outline: none;
+      box-shadow: none; }
+    .typolab .typolab-tabs .nav-tab-active {
+      border-bottom: 3px solid #32373C;
+      font-weight: 500; }
+      @media screen and (max-width: 480px) {
+        .typolab .typolab-tabs .nav-tab-active {
+          padding-left: 15px;
+          border-bottom-width: 0px; } }
+.typolab .typolab-dropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 400px;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1); }
+  .typolab .typolab-dropdown h3 {
+    padding: 15px 25px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500; }
+  .typolab .typolab-dropdown ul {
+    margin: 0; }
+    .typolab .typolab-dropdown ul li {
+      position: relative;
+      margin: 0;
+      border-top: 1px solid #ccd0d4;
+      transition: all 100ms; }
+      .typolab .typolab-dropdown ul li:hover {
+        background-color: #fafafa; }
+      .typolab .typolab-dropdown ul li.current {
+        background-color: #e9f3f8;
+        pointer-events: none; }
+        .typolab .typolab-dropdown ul li.current:before {
+          position: absolute;
+          top: 50%;
+          right: 25px;
+          width: 12px;
+          height: 12px;
+          color: #007cba;
+          font-size: 12px;
+          font-family: 'KaliumAdminIcons';
+          line-height: 1;
+          content: "\e939";
+          transform: translateY(-50%); }
+      .typolab .typolab-dropdown ul li a {
+        display: block;
+        padding: 15px 25px;
+        box-shadow: none;
+        text-decoration: none; }
+      .typolab .typolab-dropdown ul li .font-source-name svg {
+        max-width: 20px; }
+      .typolab .typolab-dropdown ul li .font-source-name span {
+        font-size: 15px;
+        color: #555d66; }
+
+.typolab .typolab-notice {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .typolab .typolab-notice i {
+    color: #007cba;
+    margin-right: 5px; }
+
+.typolab .page-title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.2; }
+  .typolab .page-title small {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    font-size: 16px; }
+  .typolab .page-title .separator {
+    display: inline-block;
+    height: 12px;
+    width: 1px;
+    margin: 0 20px;
+    background-color: #999;
+    line-height: 1; }
+  .typolab .page-title .change-source {
+    position: relative;
+    padding-right: 15px;
+    color: #555;
+    text-decoration: none;
+    box-shadow: none; }
+    .typolab .page-title .change-source:after {
+      position: absolute;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      font-size: 8px;
+      font-family: 'KaliumAdminIcons';
+      content: "\e917";
+      right: 0;
+      top: 50%;
+      margin-top: -4px; }
+    .typolab .page-title .change-source.visible:after {
+      transform: rotate(180deg); }
+
+.typolab .font-source-select {
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.98);
+  transform-origin: top left;
+  transition: all 150ms ease-in-out;
+  z-index: 0; }
+  .typolab .font-source-select.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 100; }
+
+.typolab .typolab-table {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: 0; }
+  .typolab .typolab-table-responsive {
+    width: 100%;
+    overflow-x: auto; }
+  .typolab .typolab-table tr td, .typolab .typolab-table tr th {
+    text-align: left;
+    padding: 10px 15px;
+    border-left: 1px solid #ccd0d4;
+    border-bottom: 1px solid #ccd0d4; }
+    .typolab .typolab-table tr td.text-center, .typolab .typolab-table tr th.text-center {
+      text-align: center; }
+    .typolab .typolab-table tr td:first-child, .typolab .typolab-table tr th:first-child {
+      border-left: 0; }
+    .typolab .typolab-table tr td i, .typolab .typolab-table tr th i {
+      margin-right: 5px; }
+    .typolab .typolab-table tr td.no-padding, .typolab .typolab-table tr th.no-padding {
+      padding: 0; }
+  .typolab .typolab-table tr th {
+    font-weight: 600;
+    color: #222222; }
+    .typolab .typolab-table tr th p {
+      font-weight: normal; }
+    .typolab .typolab-table tr th.col-4 {
+      width: 33.3333333333%; }
+  .typolab .typolab-table tr input[type="text"],
+  .typolab .typolab-table tr input[type="number"],
+  .typolab .typolab-table tr textarea,
+  .typolab .typolab-table tr select {
+    width: 100%; }
+  .typolab .typolab-table tr.text-center td, .typolab .typolab-table tr.text-center th {
+    text-align: center; }
+  .typolab .typolab-table tr.hover {
+    background: #f7f7f7; }
+    .typolab .typolab-table tr.hover .no-bg {
+      background: #fff; }
+  .typolab .typolab-table tr.vtop td, .typolab .typolab-table tr.vtop th {
+    vertical-align: top; }
+  .typolab .typolab-table tr .description small {
+    display: block;
+    color: #666; }
+    .typolab .typolab-table tr .description small strong {
+      color: #767676; }
+  .typolab .typolab-table tbody tr:last-child td, .typolab .typolab-table tbody tr:last-child th {
+    border-bottom: 0; }
+  .typolab .typolab-table tbody th, .typolab .typolab-table tbody td {
+    padding: 15px; }
+  .typolab .typolab-table tfoot .show-advanced-options-column {
+    padding: 0; }
+  .typolab .typolab-table tfoot .show-advanced-options {
+    display: block;
+    padding: 10px;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .typolab .typolab-table select {
+    max-width: 100%; }
+  .typolab .typolab-table--settings {
+    margin-bottom: 40px; }
+    .typolab .typolab-table--settings td, .typolab .typolab-table--settings th {
+      padding-left: 20px;
+      padding-right: 20px; }
+    .typolab .typolab-table--settings th {
+      font-weight: normal; }
+      .typolab .typolab-table--settings th label {
+        font-size: 16px;
+        font-weight: 500; }
+      .typolab .typolab-table--settings th p {
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: #555D66;
+        font-size: 15px; }
+      .typolab .typolab-table--settings th .info {
+        width: 14px;
+        height: 14px;
+        margin-left: 3px;
+        color: #2271b1;
+        font-size: 14px; }
+    .typolab .typolab-table--settings td {
+      border-right: 0; }
+      .typolab .typolab-table--settings td .link {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 16px;
+        text-decoration: none; }
+        .typolab .typolab-table--settings td .link:hover {
+          text-decoration: underline; }
+    .typolab .typolab-table--settings .directory-permissions {
+      position: relative; }
+      .typolab .typolab-table--settings .directory-permissions input {
+        background-color: #fff;
+        box-shadow: none;
+        min-height: 36px; }
+      .typolab .typolab-table--settings .directory-permissions span {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background-color: #72BF40;
+        display: inline-block;
+        color: #fff;
+        border-radius: 4px;
+        padding: 5px 7px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold; }
+      .typolab .typolab-table--settings .directory-permissions.writable input {
+        border-color: #72BF40; }
+      .typolab .typolab-table--settings .directory-permissions.writable span {
+        background-color: #72BF40; }
+      .typolab .typolab-table--settings .directory-permissions.not-writable input {
+        border-color: #e03434; }
+      .typolab .typolab-table--settings .directory-permissions.not-writable span {
+        background-color: #e03434; }
+  .typolab .typolab-table--alt tr td, .typolab .typolab-table--alt tr th {
+    padding: 15px 20px;
+    font-size: 16px; }
+  .typolab .typolab-table--alt tr th {
+    font-weight: 500; }
+  .typolab .typolab-table--alt tfoot {
+    background-color: #fafafa; }
+    .typolab .typolab-table--alt tfoot td, .typolab .typolab-table--alt tfoot th {
+      border-top: 1px solid #ccd0d4; }
+    .typolab .typolab-table--alt tfoot tr:last-child td, .typolab .typolab-table--alt tfoot tr:last-child th {
+      border-bottom: 0; }
+  @media screen and (max-width: 782px) {
+    .typolab .typolab-table--conditional-loading {
+      min-width: 600px; } }
+  @media screen and (max-width: 960px) {
+    .typolab .typolab-table--custom-selectors {
+      width: 1200px; } }
+  .typolab .typolab-table--custom-selectors .column-sort {
+    width: 25px;
+    padding-right: 0px; }
+    .typolab .typolab-table--custom-selectors .column-sort a {
+      display: flex;
+      opacity: 0;
+      transition: opacity 200ms;
+      cursor: ns-resize;
+      text-decoration: none; }
+  .typolab .typolab-table--custom-selectors .column-selectors {
+    padding-left: 10px; }
+    .typolab .typolab-table--custom-selectors .column-selectors .select2-container {
+      min-width: 300px;
+      max-width: 500px; }
+    .typolab .typolab-table--custom-selectors .column-selectors [multiple] {
+      height: 30px; }
+  .typolab .typolab-table--custom-selectors .column-font-variant {
+    width: 15%;
+    min-width: 120px; }
+  .typolab .typolab-table--custom-selectors .column-font-case {
+    width: 13%; }
+    .typolab .typolab-table--custom-selectors .column-font-case .button {
+      min-width: 40px;
+      font-size: 14px; }
+  .typolab .typolab-table--custom-selectors .column-font-size {
+    width: 12%; }
+  .typolab .typolab-table--custom-selectors .column-line-height {
+    width: 12%; }
+  .typolab .typolab-table--custom-selectors .column-letter-spacing {
+    width: 12%; }
+  .typolab .typolab-table--custom-selectors .column-actions {
+    width: 20px;
+    padding-left: 0; }
+    .typolab .typolab-table--custom-selectors .column-actions a {
+      opacity: 0;
+      transition: opacity 200ms; }
+    .typolab .typolab-table--custom-selectors .column-actions i {
+      margin-right: 0; }
+  .typolab .typolab-table--custom-selectors .no-selectors {
+    padding: 20px 15px; }
+    @media screen and (min-width: 782px) {
+      .typolab .typolab-table--custom-selectors .no-selectors {
+        text-align: center; } }
+  .typolab .typolab-table--custom-selectors .select2-container {
+    min-width: 100%; }
+    .typolab .typolab-table--custom-selectors .select2-container .select2-selection {
+      min-height: 20px;
+      padding-bottom: 3px;
+      border-color: #8c8f94; }
+    .typolab .typolab-table--custom-selectors .select2-container .select2-search {
+      margin-bottom: 0; }
+      .typolab .typolab-table--custom-selectors .select2-container .select2-search .select2-search__field {
+        margin-top: 7px;
+        margin-left: 8px;
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        line-height: 1; }
+    .typolab .typolab-table--custom-selectors .select2-container .select2-selection__choice {
+      position: relative;
+      border-radius: 3px;
+      margin-bottom: 0;
+      border-color: #ccd0d4;
+      background-color: #fafafa;
+      font-size: 12px;
+      top: -1px; }
+      .typolab .typolab-table--custom-selectors .select2-container .select2-selection__choice .select2-selection__choice__remove {
+        border-right-color: #ccd0d4;
+        bottom: 0;
+        font-weight: normal;
+        line-height: 1; }
+    html .select2-container .select2-dropdown {
+      border-color: #8c8f94; }
+    html .select2-container .select2-results__option--highlighted.select2-results__option--selectable {
+      background-color: #007cba; }
+  .typolab .typolab-table--custom-selectors .remove-custom-selector {
+    display: flex;
+    text-decoration: none; }
+  .typolab .typolab-table--custom-selectors tr:hover .column-sort a,
+  .typolab .typolab-table--custom-selectors tr:hover .column-actions a {
+    opacity: 1; }
+  @media screen and (max-width: 960px) {
+    .typolab .typolab-table--font-appearance-group {
+      width: 800px; } }
+  .typolab .typolab-table--font-appearance-group tr td, .typolab .typolab-table--font-appearance-group tr th {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .typolab .typolab-table--font-appearance-group thead .heading th {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .typolab .typolab-table--font-appearance-group thead .heading h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px; }
+  .typolab .typolab-table--font-appearance-group thead .heading .button-group {
+    float: right; }
+  .typolab .typolab-table--font-appearance-group thead .columns th {
+    font-weight: 500; }
+  .typolab .typolab-table--font-appearance-group tbody .button-group {
+    display: flex; }
+    .typolab .typolab-table--font-appearance-group tbody .button-group .button {
+      flex-grow: 1; }
+  .typolab .typolab-table--font-appearance-group .column-element {
+    font-weight: 500; }
+  .typolab .typolab-table.mutual-column-width {
+    table-layout: fixed; }
+    .typolab .typolab-table.mutual-column-width td, .typolab .typolab-table.mutual-column-width th {
+      width: 1%; }
+  .typolab .typolab-table .uppercase {
+    text-transform: uppercase; }
+  .typolab .typolab-table .capitalize {
+    text-transform: capitalize; }
+  .typolab .typolab-table .no-top-padding {
+    margin-top: 0; }
+  .typolab .typolab-table .nowrap {
+    white-space: nowrap; }
+  .typolab .typolab-table .grouped-input {
+    display: table;
+    width: 100%; }
+    .typolab .typolab-table .grouped-input.no-border {
+      border: 0; }
+    .typolab .typolab-table .grouped-input .grouped-input-col {
+      display: table-cell;
+      vertical-align: middle; }
+      .typolab .typolab-table .grouped-input .grouped-input-col.unit {
+        width: 10%;
+        text-align: center;
+        border-left: 1px solid #dddddd; }
+    .typolab .typolab-table .grouped-input input,
+    .typolab .typolab-table .grouped-input textarea {
+      border: 0;
+      margin: 0;
+      box-shadow: 0 0 0 transparent;
+      border-radius: 4px;
+      border: 1px solid #7e8993;
+      background-color: #fff;
+      color: #32373c; }
+      .typolab .typolab-table .grouped-input input:focus,
+      .typolab .typolab-table .grouped-input textarea:focus {
+        border-color: #007cba;
+        box-shadow: 0 0 0 2px #007cba;
+        outline: 2px solid transparent; }
+    .typolab .typolab-table .grouped-input select {
+      margin: 0;
+      background-color: #f7f7f7; }
+    .typolab .typolab-table .grouped-input input, .typolab .typolab-table .grouped-input select {
+      line-height: 28px;
+      height: 28px; }
+    .typolab .typolab-table .grouped-input.red select, .typolab .typolab-table .grouped-input.green select {
+      background: #fff url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E") no-repeat right 5px top 55%; }
+    .typolab .typolab-table .grouped-input.red select {
+      background-color: #CB4335;
+      color: #fff;
+      border-color: #66211a; }
+    .typolab .typolab-table .grouped-input.green select {
+      background-color: #63b92b;
+      color: #fff;
+      border-color: #2c5213; }
+  .typolab .typolab-table .toggle-indicator {
+    position: relative;
+    top: 2px;
+    float: right;
+    line-height: 1; }
+    .typolab .typolab-table .toggle-indicator:before {
+      font-family: 'KaliumAdminIcons';
+      font-size: 8px;
+      content: '\e917';
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased; }
+  .typolab .typolab-table .typolab-toggle-body {
+    cursor: pointer; }
+    .typolab .typolab-table .typolab-toggle-body .delete {
+      display: block;
+      float: right;
+      margin-right: 15px;
+      color: #a00;
+      font-weight: normal;
+      text-decoration: none;
+      opacity: 0;
+      transition: all 200ms; }
+  .typolab .typolab-table .advanced-option {
+    display: none; }
+    .typolab .typolab-table .advanced-option.is-visible {
+      display: table-row; }
+  .typolab .typolab-table div.advanced-option.is-visible {
+    display: block; }
+  .typolab .typolab-table:hover .typolab-toggle-body .delete {
+    opacity: 1; }
+  .typolab .typolab-table.typolab-toggle--toggled .toggle-indicator {
+    transform: rotateZ(180deg); }
+  .typolab .typolab-table.typolab-toggle--toggled tbody, .typolab .typolab-table.typolab-toggle--toggled tfoot {
+    display: none; }
+  .typolab .typolab-table.horizontal-borders tr td, .typolab .typolab-table.horizontal-borders tr th {
+    border-left: 0; }
+
+.typolab .responsive-input .responsive-input-entry {
+  display: none; }
+  .typolab .responsive-input .responsive-input-entry.current {
+    display: block; }
+
+.typolab #typolab-settings-form {
+  max-width: 1050px; }
+  .typolab #typolab-settings-form p.submit {
+    margin-top: 0; }
+
+.typolab .font-export-import tbody {
+  font-size: 15px; }
+
+.typolab .font-export-import--export p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px; }
+
+.typolab .font-export-import--export .font-export-checkboxes ul {
+  margin: 0; }
+
+.typolab .font-export-import--export .font-export-loading,
+.typolab .font-export-import--export .font-export-data {
+  display: none; }
+
+.typolab .font-export-import--import label {
+  display: block;
+  margin-bottom: 10px; }
+
+.typolab .font-export-import--import .font-import-loading {
+  display: none; }
+  .typolab .font-export-import--import .font-import-loading i {
+    font-size: 14px;
+    animation-name: typolab-spin-animation;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .typolab .font-export-import--import .font-import-loading .progress {
+    color: #666; }
+
+.typolab .font-export-import--import .font-import-finished {
+  display: none;
+  color: #72BF40; }
+  .typolab .font-export-import--import .font-import-finished i {
+    font-size: 14px; }
+
+.typolab .font-export-import .button {
+  display: inline-flex;
+  align-items: center; }
+  .typolab .font-export-import .button .kalium-admin-icon {
+    position: relative;
+    margin-right: 5px;
+    font-size: 14px; }
+
+.typolab .font-custom-selectors .responsive-devices {
+  margin-top: -60px;
+  margin-bottom: 30px;
+  float: right; }
+  .typolab .font-custom-selectors .responsive-devices i {
+    margin-right: 0; }
+
+.typolab .font-custom-selectors th.column-font-case:after,
+.typolab .font-custom-selectors th.column-font-size:after,
+.typolab .font-custom-selectors th.column-line-height:after,
+.typolab .font-custom-selectors th.column-letter-spacing:after {
+  display: inline-block;
+  margin-left: 5px;
+  font-family: 'KaliumAdminIcons';
+  font-size: 14px;
+  line-height: 1;
+  vertical-align: text-bottom; }
+
+.typolab .font-custom-selectors--tablet th.column-font-case:after,
+.typolab .font-custom-selectors--tablet th.column-font-size:after,
+.typolab .font-custom-selectors--tablet th.column-line-height:after,
+.typolab .font-custom-selectors--tablet th.column-letter-spacing:after {
+  content: "\e925"; }
+
+.typolab .font-custom-selectors--mobile th.column-font-case:after,
+.typolab .font-custom-selectors--mobile th.column-font-size:after,
+.typolab .font-custom-selectors--mobile th.column-line-height:after,
+.typolab .font-custom-selectors--mobile th.column-letter-spacing:after {
+  content: "\e926"; }
+
+.typolab .typolab-select-font-source tbody tr {
+  cursor: pointer; }
+  .typolab .typolab-select-font-source tbody tr td, .typolab .typolab-select-font-source tbody tr th {
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1; }
+  .typolab .typolab-select-font-source tbody tr.hover {
+    background: #fafafa; }
+
+.typolab .typolab-select-font-source .radio-input {
+  width: 10%;
+  text-align: center; }
+  .typolab .typolab-select-font-source .radio-input input {
+    margin: 0; }
+
+.typolab .typolab-selected-font-source {
+  flex-grow: 1; }
+  .typolab .typolab-selected-font-source .font-source-description {
+    display: none; }
+    .typolab .typolab-selected-font-source .font-source-description h3 {
+      font-size: 22px;
+      margin-top: 0; }
+    .typolab .typolab-selected-font-source .font-source-description.selected {
+      display: block; }
+  .typolab .typolab-selected-font-source tbody tr td {
+    padding: 25px;
+    vertical-align: top; }
+
+.typolab #typolab_add_font {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 1; }
+  .typolab #typolab_add_font span {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    transition: transform 250ms ease-in-out; }
+  .typolab #typolab_add_font:hover span {
+    transform: translateX(4px); }
+  .typolab #typolab_add_font:focus span
+.typolab #typolab_add_font:active span {
+    transform: translateX(4px); }
+
+.typolab .font-select-and-preview {
+  margin-bottom: 40px; }
+
+.typolab .row-layout-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .typolab .row-layout-flex .col {
+    flex: 1 0 0%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .typolab .row-layout-flex .col-flex {
+      display: flex; }
+      .typolab .row-layout-flex .col-flex-column {
+        flex-direction: column; }
+    .typolab .row-layout-flex .col-1 {
+      flex: 0 0 auto;
+      width: 8.3333333333%; }
+    .typolab .row-layout-flex .col-2 {
+      flex: 0 0 auto;
+      width: 16.6666666667%; }
+    .typolab .row-layout-flex .col-3 {
+      flex: 0 0 auto;
+      width: 25%; }
+    .typolab .row-layout-flex .col-4 {
+      flex: 0 0 auto;
+      width: 33.3333333333%; }
+    .typolab .row-layout-flex .col-5 {
+      flex: 0 0 auto;
+      width: 41.6666666667%; }
+    .typolab .row-layout-flex .col-6 {
+      flex: 0 0 auto;
+      width: 50%; }
+    .typolab .row-layout-flex .col-7 {
+      flex: 0 0 auto;
+      width: 58.3333333333%; }
+    .typolab .row-layout-flex .col-8 {
+      flex: 0 0 auto;
+      width: 66.6666666667%; }
+    .typolab .row-layout-flex .col-9 {
+      flex: 0 0 auto;
+      width: 75%; }
+    .typolab .row-layout-flex .col-10 {
+      flex: 0 0 auto;
+      width: 83.3333333333%; }
+    .typolab .row-layout-flex .col-11 {
+      flex: 0 0 auto;
+      width: 91.6666666667%; }
+    .typolab .row-layout-flex .col-12 {
+      flex: 0 0 auto;
+      width: 100%; }
+    @media screen and (max-width: 960px) {
+      .typolab .row-layout-flex .col {
+        width: 100%; } }
+.typolab .typolab-fonts-list .font-source-image {
+  height: 22px; }
+
+@media screen and (min-width: 960px) {
+  .typolab .typolab-fonts-list .fonts .column-font_family {
+    width: 22%; } }
+
+.typolab .typolab-fonts-list .fonts .column-font_source,
+.typolab .typolab-fonts-list .fonts .column-font_status {
+  width: 20%; }
+
+.typolab .typolab-fonts-list .fonts .column-font_preview,
+.typolab .typolab-fonts-list .fonts .column-font_source,
+.typolab .typolab-fonts-list .fonts .column-font_status {
+  vertical-align: middle; }
+
+.typolab .typolab-fonts-list .fonts .font-status-badge {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #63b92b;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1; }
+
+.typolab .typolab-fonts-list .fonts .font-status-inactive {
+  background-color: #cb4335; }
+
+.typolab .typolab-fonts-list .fonts .font-preview {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.typolab .typolab-fonts-list .fonts .laborator-font-locked {
+  display: inline-block;
+  margin-left: 5px; }
+
+.typolab .typolab-fonts-list .no-fonts-installed {
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 50px; }
+  .typolab .typolab-fonts-list .no-fonts-installed h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400; }
+  .typolab .typolab-fonts-list .no-fonts-installed p,
+  .typolab .typolab-fonts-list .no-fonts-installed .button {
+    font-size: 16px; }
+  .typolab .typolab-fonts-list .no-fonts-installed .button {
+    margin-top: 10px; }
+    .typolab .typolab-fonts-list .no-fonts-installed .button i {
+      margin-right: 3px;
+      font-size: 14px; }
+
+.typolab .fonts-list-select {
+  background-color: #fff;
+  padding: 0 25px;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  overflow: hidden; }
+  @media screen and (max-width: 960px) {
+    .typolab .fonts-list-select {
+      margin-bottom: 20px; } }
+  .typolab .fonts-list-select .tabs-list {
+    margin: 0 -25px;
+    display: table;
+    text-align: center; }
+    .typolab .fonts-list-select .tabs-list a {
+      display: table-cell;
+      padding: 5px 0;
+      width: 1%;
+      border-bottom: 1px solid #ccd0d4;
+      font-size: 12px;
+      text-decoration: none;
+      color: #666; }
+      .typolab .fonts-list-select .tabs-list a:focus {
+        box-shadow: none; }
+      .typolab .fonts-list-select .tabs-list a:hover {
+        background-color: #fafafa; }
+      .typolab .fonts-list-select .tabs-list a.letter-unmatch {
+        pointer-events: none;
+        color: #eee; }
+      .typolab .fonts-list-select .tabs-list a.current {
+        border-bottom-color: transparent;
+        font-weight: bold;
+        color: #111; }
+      .typolab .fonts-list-select .tabs-list a + a {
+        border-left: 1px solid #ccd0d4; }
+    .typolab .fonts-list-select .tabs-list.hidden {
+      display: none !important; }
+  .typolab .fonts-list-select .title-container {
+    display: flex;
+    align-items: center;
+    padding: 13px 25px;
+    border-bottom: 1px solid #ccd0d4;
+    margin: 0 -25px; }
+    .typolab .fonts-list-select .title-container h3 {
+      margin: 0;
+      font-weight: 500; }
+  .typolab .fonts-list-select .search-bar {
+    display: flex;
+    margin-left: auto; }
+    .typolab .fonts-list-select .search-bar input {
+      width: 100%;
+      position: relative;
+      max-width: 220px;
+      padding-right: 30px;
+      background: #fff no-repeat 95% 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='11.997' viewBox='0 0 12 11.997'%3E%3Cpath id='search-alternate' d='M12,11.1,8.671,7.774a4.727,4.727,0,1,0-.9.9L11.1,12a.645.645,0,0,0,.9,0A.637.637,0,0,0,12,11.1ZM1.49,4.928A3.437,3.437,0,1,1,4.926,8.365,3.437,3.437,0,0,1,1.49,4.928Z' transform='translate(-0.182 -0.185)' fill='%23222'/%3E%3C/svg%3E%0A"); }
+      .typolab .fonts-list-select .search-bar input + select {
+        margin-left: 10px; }
+  .typolab .fonts-list-select .font-list {
+    position: relative;
+    display: block;
+    margin: 0 -25px;
+    min-height: 150px;
+    max-height: 450px;
+    overflow: auto; }
+    .typolab .fonts-list-select .font-list .font-selector-item {
+      position: relative;
+      padding: 14px 25px;
+      display: none;
+      border-bottom: 1px solid rgba(204, 208, 212, 0.7);
+      color: #555;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 150ms ease-in-out, color 150ms ease-in-out; }
+      .typolab .fonts-list-select .font-list .font-selector-item .checked {
+        display: block;
+        float: left;
+        width: 0;
+        transition: all 200ms;
+        overflow: hidden; }
+        .typolab .fonts-list-select .font-list .font-selector-item .checked i {
+          font-size: 14px; }
+      .typolab .fonts-list-select .font-list .font-selector-item:nth-child(even) {
+        background-color: #fdfdfd; }
+      .typolab .fonts-list-select .font-list .font-selector-item:hover {
+        color: #000;
+        background-color: #fafafa; }
+      .typolab .fonts-list-select .font-list .font-selector-item.active {
+        display: block; }
+      .typolab .fonts-list-select .font-list .font-selector-item.current {
+        background-color: #e9f3f8;
+        color: #0073aa;
+        font-weight: 600; }
+        .typolab .fonts-list-select .font-list .font-selector-item.current .checked {
+          width: 25px; }
+      .typolab .fonts-list-select .font-list .font-selector-item.search-match {
+        display: block; }
+      .typolab .fonts-list-select .font-list .font-selector-item.search-unmatch {
+        display: none; }
+      .typolab .fonts-list-select .font-list .font-selector-item.category-match {
+        display: block; }
+        .typolab .fonts-list-select .font-list .font-selector-item.category-match.search-unmatch, .typolab .fonts-list-select .font-list .font-selector-item.category-match.letter-unmatch {
+          display: none; }
+      .typolab .fonts-list-select .font-list .font-selector-item.category-unmatch {
+        display: none; }
+      .typolab .fonts-list-select .font-list .font-selector-item:focus {
+        box-shadow: none; }
+    .typolab .fonts-list-select .font-list > .font-selector-item:last-child {
+      border-bottom: 0; }
+    .typolab .fonts-list-select .font-list .loading-fonts,
+    .typolab .fonts-list-select .font-list .no-records {
+      display: block;
+      padding: 30px 0;
+      color: #666;
+      font-size: 16px;
+      text-align: center; }
+    .typolab .fonts-list-select .font-list .no-records {
+      display: none; }
+      .typolab .fonts-list-select .font-list .no-records.active {
+        display: block; }
+    .typolab .fonts-list-select .font-list.download-in-progress > a {
+      pointer-events: none;
+      color: #c3c3c3;
+      transition: all 350ms ease-in-out; }
+      .typolab .fonts-list-select .font-list.download-in-progress > a.current {
+        pointer-events: auto;
+        color: #0073aa; }
+        .typolab .fonts-list-select .font-list.download-in-progress > a.current:after {
+          content: '…'; }
+  .typolab .fonts-list-select.verical-categories {
+    position: relative;
+    display: block;
+    padding: 0;
+    padding-top: 52px; }
+    .typolab .fonts-list-select.verical-categories::after {
+      display: block;
+      clear: both;
+      content: ""; }
+    .typolab .fonts-list-select.verical-categories .tabs-list,
+    .typolab .fonts-list-select.verical-categories .search-bar,
+    .typolab .fonts-list-select.verical-categories .font-list {
+      display: block;
+      margin: 0; }
+    .typolab .fonts-list-select.verical-categories .tabs-list {
+      background: #fafafa; }
+      .typolab .fonts-list-select.verical-categories .tabs-list a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-left: 0;
+        border-right: 1px solid #ccd0d4;
+        box-sizing: border-box; }
+        .typolab .fonts-list-select.verical-categories .tabs-list a.current {
+          border-right-color: transparent;
+          border-bottom-color: #ccd0d4;
+          background-color: #fff; }
+    .typolab .fonts-list-select.verical-categories .tabs-list {
+      width: 20%;
+      float: left; }
+    .typolab .fonts-list-select.verical-categories .search-bar {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      box-sizing: border-box; }
+    .typolab .fonts-list-select.verical-categories .font-list {
+      width: 80%;
+      float: right; }
+
+.typolab .font-face-variants .typolab-table .font-file-entry {
+  color: #777; }
+  .typolab .font-face-variants .typolab-table .font-file-entry label {
+    display: block;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  .typolab .font-face-variants .typolab-table .font-file-entry input {
+    display: inline-block;
+    width: 75%; }
+  .typolab .font-face-variants .typolab-table .font-file-entry button {
+    float: right;
+    width: 22%; }
+  .typolab .font-face-variants .typolab-table .font-file-entry-message {
+    padding: 10px 15px;
+    border-top: 1px solid #ccd0d4;
+    margin: 10px -15px 0 -15px;
+    color: #777; }
+  .typolab .font-face-variants .typolab-table .font-file-entry + .font-file-entry {
+    margin-top: 10px; }
+
+.typolab .font-preview-container .font-preview-row {
+  position: relative;
+  margin-bottom: 15px;
+  float: left;
+  width: 100%;
+  box-sizing: border-box; }
+  .typolab .font-preview-container .font-preview-row#font-family-name .font-preview-row-bg {
+    display: flex; }
+    .typolab .font-preview-container .font-preview-row#font-family-name .font-preview-row-bg .block-title {
+      display: flex;
+      align-items: center;
+      width: 30%;
+      border-right: 1px solid #ccd0d4;
+      border-bottom: 0;
+      background: #f7f7f7; }
+    .typolab .font-preview-container .font-preview-row#font-family-name .font-preview-row-bg .font-family-name {
+      flex-grow: 1;
+      padding-left: 25px; }
+  .typolab .font-preview-container .font-preview-row .font-preview-row-bg {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    overflow: hidden; }
+    .typolab .font-preview-container .font-preview-row .font-preview-row-bg .block-title {
+      display: block;
+      padding: 20px 25px;
+      border-bottom: 1px solid #ccd0d4;
+      margin: 0;
+      font-weight: 500;
+      line-height: 1; }
+    .typolab .font-preview-container .font-preview-row .font-preview-row-bg span.block-title {
+      line-height: 1; }
+  .typolab .font-preview-container .font-preview-row .loading-font-preview {
+    padding: 30px;
+    text-align: center;
+    color: #666; }
+  .typolab .font-preview-container .font-preview-row .font-family-name {
+    padding: 12px 15px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px; }
+  .typolab .font-preview-container .font-preview-row .font-details-link {
+    margin: 0;
+    padding: 20px;
+    background: #f7f7f7;
+    font-size: 14px; }
+    .typolab .font-preview-container .font-preview-row .font-details-link a {
+      text-decoration: none; }
+    .typolab .font-preview-container .font-preview-row .font-details-link .font-refresh-link {
+      position: relative;
+      display: block;
+      box-shadow: none;
+      text-decoration: none;
+      float: right;
+      outline: none; }
+      .typolab .font-preview-container .font-preview-row .font-details-link .font-refresh-link.is-loading span {
+        animation-name: typolab-spin-animation;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      .typolab .font-preview-container .font-preview-row .font-details-link .font-refresh-link + .sep {
+        display: none; }
+    .typolab .font-preview-container .font-preview-row .font-details-link .sep {
+      position: relative;
+      display: inline-block;
+      width: 1px;
+      height: 10px;
+      line-height: 1;
+      margin: 0 10px; }
+      .typolab .font-preview-container .font-preview-row .font-details-link .sep:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background: #ccd0d4;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0; }
+  .typolab .font-preview-container .font-preview-row .variant-entry {
+    position: relative;
+    display: flex;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccd0d4;
+    transition: background-color 100ms ease-in-out; }
+    .typolab .font-preview-container .font-preview-row .variant-entry[for] {
+      padding-right: 0; }
+    .typolab .font-preview-container .font-preview-row .variant-entry.is-checked {
+      background-color: #e9f3f8; }
+    .typolab .font-preview-container .font-preview-row .variant-entry .variant-checkbox {
+      margin-top: 1px; }
+      .typolab .font-preview-container .font-preview-row .variant-entry .variant-checkbox + .variant-preview {
+        padding-left: 10px; }
+    .typolab .font-preview-container .font-preview-row .variant-entry .variant-preview {
+      flex-grow: 1; }
+    .typolab .font-preview-container .font-preview-row .variant-entry .variant-preview-image {
+      display: block;
+      color: #b7b7b7; }
+      .typolab .font-preview-container .font-preview-row .variant-entry .variant-preview-image img {
+        width: auto;
+        max-width: 100%;
+        height: 18px;
+        opacity: 0;
+        transition: opacity 300ms; }
+        .typolab .font-preview-container .font-preview-row .variant-entry .variant-preview-image img.is-loaded {
+          opacity: 1; }
+    .typolab .font-preview-container .font-preview-row .variant-entry .variant-preview-text {
+      display: block;
+      font-size: 16px;
+      opacity: 0;
+      line-height: 1.2;
+      transition: opacity 100ms; }
+      .typolab .font-preview-container .font-preview-row .variant-entry .variant-preview-text.is-loaded {
+        opacity: 1;
+        transition-delay: 100ms; }
+    .typolab .font-preview-container .font-preview-row .variant-entry .variant-title {
+      display: block;
+      padding-top: 5px;
+      color: #666;
+      font-size: 13px; }
+
+.typolab .font-conditional-loading {
+  width: 100%;
+  margin: 10px 0;
+  border-spacing: 0;
+  border-collapse: 0; }
+  .typolab .font-conditional-loading td, .typolab .font-conditional-loading th {
+    vertical-align: middle; }
+    .typolab .font-conditional-loading td.statement, .typolab .font-conditional-loading td.criteria, .typolab .font-conditional-loading th.statement, .typolab .font-conditional-loading th.criteria {
+      width: 40%; }
+  .typolab .font-conditional-loading thead tr td, .typolab .font-conditional-loading thead tr th,
+  .typolab .font-conditional-loading tbody tr td,
+  .typolab .font-conditional-loading tbody tr th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0; }
+  .typolab .font-conditional-loading thead th {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500; }
+  .typolab .font-conditional-loading tbody tr td select {
+    width: 100%;
+    font-size: 12px; }
+    .typolab .font-conditional-loading tbody tr td select.is-loading {
+      font-style: italic; }
+  .typolab .font-conditional-loading tbody tr td.or-label {
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    line-height: 1;
+    font-size: 12px; }
+    .typolab .font-conditional-loading tbody tr td.or-label:before {
+      content: '';
+      width: 100%;
+      left: 0;
+      top: 50%;
+      position: absolute;
+      display: block;
+      margin-top: -1px;
+      background: #ccd0d4;
+      height: 1px; }
+    .typolab .font-conditional-loading tbody tr td.or-label span {
+      position: relative;
+      display: inline-block;
+      background: #fff;
+      padding: 0 10px;
+      font-size: 12px;
+      margin-left: -30px; }
+  .typolab .font-conditional-loading tbody tr td.actions {
+    padding-left: 0; }
+  .typolab .font-conditional-loading tbody tr.no-statements td {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px; }
+  .typolab .font-conditional-loading tbody > tr:first-child {
+    display: none; }
+    .typolab .font-conditional-loading tbody > tr:first-child.no-statements {
+      display: table-row; }
+  .typolab .font-conditional-loading .remove-conditional-statement {
+    text-decoration: none; }
+    .typolab .font-conditional-loading .remove-conditional-statement i {
+      margin: 0; }
+
+.typolab .font-other-options {
+  background: #fff;
+  width: 50%;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  overflow: hidden; }
+  .typolab .font-other-options .field-entry {
+    padding: 15px; }
+    .typolab .font-other-options .field-entry label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px; }
+    .typolab .font-other-options .field-entry select {
+      width: 100%; }
+    .typolab .font-other-options .field-entry + .field-entry {
+      border-top: 1px solid #ccd0d4; }
+
+.typolab #typolab-toggle-advanced-options {
+  display: block;
+  float: right;
+  padding: 5px;
+  font-size: 16px;
+  text-decoration: none; }
+  .typolab #typolab-toggle-advanced-options i {
+    margin-left: 3px; }
+  .typolab #typolab-toggle-advanced-options:active, .typolab #typolab-toggle-advanced-options:focus {
+    box-shadow: none; }
+  .typolab #typolab-toggle-advanced-options.visible i {
+    transform: rotate(180deg); }
+
+.typolab #typolab-advanced-options {
+  display: none; }
+  .typolab #typolab-advanced-options .page-title {
+    margin-top: 40px; }
+  .typolab #typolab-advanced-options.visible {
+    display: block; }
+
+.typolab input[name="stylesheet_url"].is-loading {
+  opacity: 0.5;
+  transition: opacity 300ms; }
+
+.typolab .size-unit-input {
+  display: flex; }
+  .typolab .size-unit-input .value-input {
+    min-width: 70px;
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+  .typolab .size-unit-input .units {
+    position: relative;
+    display: flex;
+    border: 1px solid #8c8f94;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px; }
+    .typolab .size-unit-input .units .units-select {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      appearance: none;
+      opacity: 0; }
+    .typolab .size-unit-input .units .unit-text {
+      padding: 0px 8px;
+      font-size: 12px; }
+    .typolab .size-unit-input .units:hover {
+      background-color: #f0f0f0; }
+
+.typolab .font-source-name {
+  display: flex;
+  align-items: center; }
+  .typolab .font-source-name svg {
+    max-width: 25px;
+    height: auto; }
+  .typolab .font-source-name span {
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 1; }
+
+.typolab td.font_source .font-source-name svg {
+  max-width: 20px; }
+
+.typolab td.font_source .font-source-name span {
+  margin-left: 10px;
+  font-size: 14px; }
+
+.typolab .font-base-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  margin-bottom: 40px; }
+  .typolab .font-base-selectors .font-base-selector-col {
+    flex: 0 0 auto;
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box; }
+    @media screen and (max-width: 960px) {
+      .typolab .font-base-selectors .font-base-selector-col {
+        width: 100%;
+        margin-bottom: 20px; } }
+  .typolab .font-base-selectors .font-base-selector {
+    padding: 25px;
+    background-color: #fff;
+    transition: all 100ms;
+    user-select: none;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    overflow: hidden; }
+    .typolab .font-base-selectors .font-base-selector.checked {
+      border-color: #007cba;
+      box-shadow: 0 0 0 2px #007cba; }
+  .typolab .font-base-selectors .selector-title {
+    display: flex;
+    align-items: center; }
+    .typolab .font-base-selectors .selector-title h3 {
+      flex-grow: 1;
+      padding-right: 10px;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500; }
+    .typolab .font-base-selectors .selector-title input {
+      margin: 0; }
+  .typolab .font-base-selectors p {
+    font-size: 15px;
+    pointer-events: none; }
+  .typolab .font-base-selectors .font-base-selector-variants {
+    padding: 25px;
+    margin: -25px;
+    margin-top: 25px;
+    border-top: 1px solid #ccd0d4;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fafafa; }
+    .typolab .font-base-selectors .font-base-selector-variants select {
+      width: 100%; }
+
+.typolab .font-appearance-group {
+  display: flex;
+  max-width: 900px;
+  margin-bottom: 20px;
+  flex-direction: column; }
+  .typolab .font-appearance-group th.column-font-case:after,
+  .typolab .font-appearance-group th.column-font-size:after,
+  .typolab .font-appearance-group th.column-line-height:after,
+  .typolab .font-appearance-group th.column-letter-spacing:after {
+    display: inline-block;
+    font-family: 'KaliumAdminIcons';
+    margin-left: 5px;
+    line-height: 1;
+    vertical-align: text-bottom; }
+  .typolab .font-appearance-group--tablet th.column-font-case:after,
+  .typolab .font-appearance-group--tablet th.column-font-size:after,
+  .typolab .font-appearance-group--tablet th.column-line-height:after,
+  .typolab .font-appearance-group--tablet th.column-letter-spacing:after {
+    content: "\e925"; }
+  .typolab .font-appearance-group--mobile th.column-font-case:after,
+  .typolab .font-appearance-group--mobile th.column-font-size:after,
+  .typolab .font-appearance-group--mobile th.column-line-height:after,
+  .typolab .font-appearance-group--mobile th.column-letter-spacing:after {
+    content: "\e926"; }
+
+.typolab .typolab-footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #666; }
+
+.laborator_page_typolab .about-wrap {
+  max-width: 100%; }
